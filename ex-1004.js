@@ -1,4 +1,4 @@
-var input = require('fs').readFileSync('./test-files/ex-4.txt', 'utf8');
+var input = require('fs').readFileSync('./test-files/ex-1004.txt', 'utf8');
 var lines = input.split('\n');
 
 /**
@@ -8,5 +8,5 @@ var lines = input.split('\n');
  */
 const A = parseInt(lines.shift());
 const B = parseInt(lines.shift());
-const soma = A + B;
-console.log(`SOMA = ${soma}`);
+const produto = A * B;
+console.log(`PROD = ${produto}`);

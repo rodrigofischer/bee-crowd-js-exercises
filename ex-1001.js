@@ -1,4 +1,4 @@
-var input = require('fs').readFileSync('./test-files/ex-2.txt', 'utf8');
+var input = require('fs').readFileSync('./test-files/ex-1001.txt', 'utf8');
 var lines = input.split('\n');
 
 /**
