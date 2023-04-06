@@ -11,7 +11,7 @@ const line2 = lines.shift();
 const notas = line1.split(' ');
 const pesoNotas = [2, 3, 4, 1];
 const totalDivisPesos = pesoNotas.reduce((acc, currValue) => acc + currValue, 0);
-const mediaPonderada = notas.map((item, index) => parseFloat(item) * parseFloat(pesoNotas[index]))
+const mediaPonderada = notas.map((item, index) => parseFloat(item) * pesoNotas[index])
             .reduce((acc, currentValue) => acc + currentValue, 0) / totalDivisPesos;
 
 console.log(`Media: ${mediaPonderada.toFixed(1)}`);
