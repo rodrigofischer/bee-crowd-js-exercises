@@ -1,5 +1,3 @@
-const { connect } = require('http2');
-
 var input = require('fs').readFileSync('./test-files/ex-1040.txt', 'utf8');
 var lines = input.split('\n');
 
@@ -12,7 +10,9 @@ const line1 = lines.shift();
 const line2 = lines.shift();
 const notas = line1.split(' ');
 const pesoNotas = [2, 3, 4, 1];
-const mediaPonderada = notas.map((item, index) => parseFloat(item) * parseFloat(pesoNotas[index])).reduce((acc, currentValue) => acc + currentValue, 0) / pesoNotas.reduce((acc, currValue) => acc + currValue, 0);
+const totalDivisPesos = pesoNotas.reduce((acc, currValue) => acc + currValue, 0);
+const mediaPonderada = notas.map((item, index) => parseFloat(item) * parseFloat(pesoNotas[index]))
+            .reduce((acc, currentValue) => acc + currentValue, 0) / totalDivisPesos;
 
 console.log(`Media: ${mediaPonderada.toFixed(1)}`);
 if(mediaPonderada >= 7){
